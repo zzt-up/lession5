@@ -15,6 +15,52 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <profiles>
+		<profile>
+			<id>base</id>
+			<properties>
+				<profileName>base</profileName>
+				<enableSign>false</enableSign>
+				<dubbo.port>39900</dubbo.port>
+				<!--zookeeper -->
+				<redis.config.localpath>connection/redis.properties</redis.config.localpath>
+				<redis.config.is_by_zookeeper_start>false</redis.config.is_by_zookeeper_start>
+
+				<message.config.localpath>connection/message.properties</message.config.localpath>
+				<message.config.is_by_zookeeper_start>false</message.config.is_by_zookeeper_start>
+
+				<!--rest discover -->
+				<restRegExr>10(\\.\\d+){3}</restRegExr>
+				<soa.idcIndex>1</soa.idcIndex>
+
+
+				<!-- redis -->
+				<redis.maxTotal>120</redis.maxTotal>
+				<redis.maxIdle>10</redis.maxIdle>
+				<redis.minIdle>1</redis.minIdle>
+				<redis.testOnBorrow>true</redis.testOnBorrow>
+				<redis.maxWaitMillis>1000</redis.maxWaitMillis>
+				<redis.testOnReturn>true</redis.testOnReturn>
+				<redis.testWhileIdle>true</redis.testWhileIdle>
+				<redis.timeBetweenEvictionRunsMillis>30000</redis.timeBetweenEvictionRunsMillis>
+				<redis.minEvictableIdleTimeMillis>30000</redis.minEvictableIdleTimeMillis>
+				<redis.socketTimeout>2000</redis.socketTimeout>
+				<jdbc.initialSize>2</jdbc.initialSize>
+				<jdbc.minIdle>2</jdbc.minIdle>
+				<jdbc.maxActive>10</jdbc.maxActive>
+				<jdbc.maxWait>60000</jdbc.maxWait>
+				<jdbc.timeBetweenEvictionRunsMillis>60000</jdbc.timeBetweenEvictionRunsMillis>
+				<jdbc.minEvictableIdleTimeMillis>300000</jdbc.minEvictableIdleTimeMillis>
+				<jdbc.poolPreparedStatements>true</jdbc.poolPreparedStatements>
+				<jdbc.maxPoolPreparedStatementPerConnectionSize>30
+				</jdbc.maxPoolPreparedStatementPerConnectionSize>
+				<show_sql>false</show_sql>
+
+			</properties>
+		</profile>
+
+
+    </profiles>
   <build>
     <finalName>lession5</finalName>
   </build>
