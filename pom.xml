@@ -15,7 +15,7 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  <profiles>
+ <profiles>
 		<profile>
 			<id>base</id>
 			<properties>
